@@ -119,7 +119,7 @@ answerChoiceA.addEventListener('click', function(event) {
         } else {
             time_remaining -= 5;
             // when user answers a question inccorrectly, subtract from the time
-            document.getElementById("AnswerResponse").innerHTML = "Incorrect! Better luck in the next one!";
+            document.getElementById("AnswerResponse").innerHTML = "Wrong!";
             setTimeout(function() {
                 document.getElementById("AnswerResponse").innerHTML = "";
                     },
@@ -139,7 +139,7 @@ answerChoiceB.addEventListener('click', function(event) {
     correctAnswer = questionsArray[i].correctAnswer;
     console.log(correctAnswer);
         if (1 === correctAnswer) { 
-            document.getElementById("AnswerResponse").innerHTML = "Correct! Nailed it!";
+            document.getElementById("AnswerResponse").innerHTML = "Correct!";
             setTimeout(function() {
                 document.getElementById("AnswerResponse").innerHTML = "";
                     },
@@ -149,7 +149,7 @@ answerChoiceB.addEventListener('click', function(event) {
             document.getElementById("score").innerHTML = score;
         } else {
             time_remaining -= 5;
-            document.getElementById("AnswerResponse").innerHTML = "Incorrect! Better luck in the next one!";
+            document.getElementById("AnswerResponse").innerHTML = "Wrong!";
             setTimeout(function() {
                 document.getElementById("AnswerResponse").innerHTML = "";
                     },
@@ -169,7 +169,7 @@ answerChoiceC.addEventListener('click', function(event) {
     correctAnswer = questionsArray[i].correctAnswer;
     console.log(correctAnswer);
     if (2 === correctAnswer) { 
-        document.getElementById("AnswerResponse").innerHTML = "Correct! Nailed it!";
+        document.getElementById("AnswerResponse").innerHTML = "Correct!";
         setTimeout(function() {
             document.getElementById("AnswerResponse").innerHTML = "";
                 },
@@ -179,7 +179,7 @@ answerChoiceC.addEventListener('click', function(event) {
         document.getElementById("score").innerHTML = score;
     } else {
         time_remaining -= 5;
-        document.getElementById("AnswerResponse").innerHTML = "Incorrect! Better luck in the next one!";
+        document.getElementById("AnswerResponse").innerHTML = "Wrong!";
         setTimeout(function() {
             document.getElementById("AnswerResponse").innerHTML = "";
                 },
@@ -199,7 +199,7 @@ answerChoiceD.addEventListener('click', function(event) {
     correctAnswer= questionsArray[i].correctAnswer.value;
     console.log(correctAnswer);
     if (3 === correctAnswer) { 
-        document.getElementById("AnswerResponse").innerHTML = "Correct! Nailed it!";
+        document.getElementById("AnswerResponse").innerHTML = "Correct!";
         setTimeout(function() {
             document.getElementById("AnswerResponse").innerHTML = "";
                 },
@@ -209,7 +209,7 @@ answerChoiceD.addEventListener('click', function(event) {
         document.getElementById("score").innerHTML = score;
     } else {
         time_remaining -= 5;
-        document.getElementById("AnswerResponse").innerHTML = "Incorrect! Better luck in the next one!";
+        document.getElementById("AnswerResponse").innerHTML = "Wrong!";
         setTimeout(function() {
             document.getElementById("AnswerResponse").innerHTML = "";
                 },
@@ -239,9 +239,6 @@ answerChoiceD.addEventListener('click', function(event) {
              high_scores.push(document.getElementById("initials").value + " " + score);
              view_high_scores();
             }
-
-        // localStorage.setItem("score",JSON.stringify(AnswerResponse));
-        // localStorage.setItem("initials", JSON.stringify(initials));
         
         function view_high_scores(){
         
